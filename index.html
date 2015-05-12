@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="pokeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pokeController.js"></script>
+  </head>
+
+  <body ng-controller='pokeController as pokeCtrl'>
+    <h1> Poke Search</h1>
+    <h3>{{pokeCtrl.pokemon.name}}</h3>
+    <input type='text' ng-model='pokeCtrl.pokeNum'></input>
+    <button ng-click="pokeCtrl.getPokemon(pokeCtrl.pokeNum)">Click me</button>
+  </body>
+</html>
